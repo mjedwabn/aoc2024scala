@@ -12,4 +12,10 @@ class Day01Test extends AnyFlatSpec with should.Matchers {
 
     totalDistanceBetweenLists(input) should be (11)
   }
+
+  "my total distance between lists" should "be" in {
+    val input = Source.fromResource("my.input").getLines()
+
+    totalDistanceBetweenLists(input) should be(1579939)
+  }
 }
