@@ -7,4 +7,4 @@ def totalDistanceBetweenLists(lines: Iterator[String]): Integer =
   val left = parsedLines.map(line => line._1).sorted
   val right = parsedLines.map(line => line._2).sorted
 
-  left.zip(right).map(f = (l, r) => (l - r).abs).sum()
+  left.zip(right).map((l, r) => (l - r).abs).sum()
