@@ -18,4 +18,16 @@ class Day01Test extends AnyFlatSpec with should.Matchers {
 
     totalDistanceBetweenLists(input) should be(1579939)
   }
+
+  "sample similarity score" should "be" in {
+    val input = Source.fromResource("sample.input").getLines()
+
+    similarityScore(input) should be(31)
+  }
+
+  "my similarity score" should "be" in {
+    val input = Source.fromResource("my.input").getLines()
+
+    similarityScore(input) should be(20351745)
+  }
 }
