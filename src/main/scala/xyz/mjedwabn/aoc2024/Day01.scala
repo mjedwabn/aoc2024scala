@@ -15,7 +15,7 @@ def similarityScore(lines: Iterator[String]): Integer =
   val rightCounts = right.groupMapReduce(identity)(_ => 1)(_ + _)
   left.map(l => l * rightCounts.getOrElse(l, 0)).sum()
 
-def parseLines(lines: Iterator[String]): List[(Int, Int)] =
+private def parseLines(lines: Iterator[String]): List[(Int, Int)] =
   lines.map(line => line.split("\\s+", 2) match {
     case Array(l, r) => (l.toInt, r.toInt)
   }).toList
